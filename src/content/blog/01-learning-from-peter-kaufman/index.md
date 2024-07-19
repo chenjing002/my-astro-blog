@@ -12,7 +12,7 @@ date: "12 22 2022"
 
 考夫曼虽还没写过一本自己的书，却“热衷”于帮人出书。除了主编《穷查理宝典》，还在准备重新出版 Fredrick Taylor Gates 的传记，值得期待！
 
-![Peter Kaufman](/public/blogimages/peterKaufman.webp)
+![Peter Kaufman](../blogimages/peterKaufman.webp)
 
 ### 01｜为什么跨学科思考很重要？
 
