@@ -6,9 +6,9 @@ date: "11 06 2022"
 
 巴菲特在 1986 年致股东信中，通过收购的 Scott Fetzer 公司，展示了估算所有者收益（Owner Earnings）的方法，将所有者收益作为真正的现金流来估算内在价值。
 
-![Owner Earnings](/public/blogimages/owner-earnings.png)
+![Owner Earnings](/public/blogimages/owner-earnings.webp)
 
-### 01 回到 1986 年
+### 01｜回到 1986 年
 
 Scott Fetzer 当年期初账面价值：$172.6M（ M 表示 Million 百万美元，下同）
 
@@ -30,9 +30,11 @@ Scott Fetzer 当年期初账面价值：$172.6M（ M 表示 Million 百万美元
 
 这造成了买入后，Scott Fetzer 在伯克希尔的报表上净利润变成 $28.605M（买入前 $40.231M），少了 $11.626M。但买卖前后，Scott Fetzer 根本没有发生任何的变化。
 
+![Company Old and New](/public/blogimages/ScottFetzer.webp)
+
 所以，如果只看买入后伯克希尔报表上 Scott Fetzer 的净利润，我们就会低估其真实的内在价值。
 
-### 02 估算所有者收益
+### 02｜估算所有者收益
 
 当我们只看到，按照 GAAP 会计准则编制的财务报表（如 1986 年买入后）时，应该怎么去估算其真正归所有者所有的现金流，进而估算公司内在价值呢？
 
@@ -40,12 +42,14 @@ Scott Fetzer 当年期初账面价值：$172.6M（ M 表示 Million 百万美元
 
 计算公式：
 
-![所有者收益计算公式](/public/blogimages/ownerEarningsCalulate.png)
+![所有者收益计算公式](/public/blogimages/ownerEarningsCalulate.webp)
 
-按上述公式，1986年所有者收益 = k+b2+b3+f+j2-年均维护性资本开支 = $48.532 - 年均维护性资本性开支。
+按上述公式，1986 年 Scott Fetzer 所有者收益 = k+b2+b3+f+j2-年均维护性资本开支 = $48.532 - 年均维护性资本性开支。
 
 
-### 03 年均资本化开支
+![Scott Fetzer 所有者收益](/public/blogimages/ownerEarningsCalculation.webp)
+
+### 03｜年均资本化开支
 
 资本性开支包含维护性资本开支（Maintenance Capital Expenditure）、增长性资本开支（Growth Capital Expenditure）。
 
@@ -65,7 +69,7 @@ Scott Fetzer 当年期初账面价值：$172.6M（ M 表示 Million 百万美元
 
 由于当年还没有现金流量表，以及 Scott Fetzer 的历史财务数据。所以，此处我就用 1986 年致股东信中，巴菲特的结论：维护性资本开支接近 $8.3M。
 
-### 04 估算内在价值
+### 04｜估算内在价值
 
 以上，我们得到 1986 年所有者收益 = $48.532M - $8.3M = $40.232M。
 
@@ -73,4 +77,5 @@ Scott Fetzer 当年期初账面价值：$172.6M（ M 表示 Million 百万美元
 
 考虑安全边际，打个 6 折，内在价值最低区间（按 0%-5% 增长率）在 $240M~$316M。上限值与巴菲特支付的 $315.2M 相近。
 
+![内在价值估算](/public/blogimages/mazhe.webp)
 

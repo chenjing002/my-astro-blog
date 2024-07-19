@@ -9,8 +9,8 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "首页",
-  DESCRIPTION: "Chen Jing's personal website.",
+  TITLE: "主页",
+  DESCRIPTION: "Chen Jing个人网站",
 };
 
 export const BLOG: Metadata = {
