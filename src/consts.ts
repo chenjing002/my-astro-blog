@@ -29,10 +29,10 @@ export const PROJECTS: Metadata = {
 };
 
 export const SOCIALS: Socials = [
-  // { 
-  //   NAME: "hi@chenjing.tech",
-  //   HREF: "mailto:hi@chenjing.tech",
-  // } ,
+  { 
+    NAME: "小红书",
+    HREF: "https://www.xiaohongshu.com/user/profile/59f426b9e8ac2b4ec98ad493",
+  } ,
   // { 
   //   NAME: "github",
   //   HREF: "https://github.com/markhorn-dev"
