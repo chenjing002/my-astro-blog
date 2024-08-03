@@ -1,6 +1,6 @@
 ---
 title: "网易影见"
-description: "增强现实（AR）交互式投影仪，2019 年中国设计智造 DIA 佳作奖"
+description: "AR 投影仪，2019 年中国设计智造佳作奖"
 date: "9 25 2019"
 # demoURL: "https://astro-nano-demo.vercel.app"
 # repoURL: "https://github.com/markhorn-dev/astro-nano"
