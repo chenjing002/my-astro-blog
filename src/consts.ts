@@ -30,13 +30,14 @@ export const PROJECTS: Metadata = {
 
 export const SOCIALS: Socials = [
   { 
+    NAME: "知乎",
+    HREF: "https://www.zhihu.com/people/28-39-23-41-72",
+  } ,
+  { 
     NAME: "小红书",
     HREF: "https://www.xiaohongshu.com/user/profile/59f426b9e8ac2b4ec98ad493",
   } ,
-  { 
-    NAME: "B站",
-    HREF: "https://space.bilibili.com/336463302?spm_id_from=333.1007.0.0",
-  } ,
+ 
   // { 
   //   NAME: "github",
   //   HREF: "https://github.com/markhorn-dev"

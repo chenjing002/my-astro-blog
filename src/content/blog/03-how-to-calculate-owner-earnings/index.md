@@ -1,6 +1,6 @@
 ---
 title: "如何计算所有者收益？以Scott Fetzer为例"
-description: "所有者收益作为真正的现金流来估算内在价值."
+description: "所有者收益作为真正的现金流来估算内在价值。"
 date: "11 06 2022"
 ---
 
