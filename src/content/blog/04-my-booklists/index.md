@@ -1,7 +1,7 @@
 ---
 title: "我的书单"
 description: "这些读物影响了我的生活和思维方式"
-date: "10 08 2024"
+date: "06 20 2023"
 ---
 
 这些读物影响了我的生活和思维方式。
@@ -9,13 +9,13 @@ date: "10 08 2024"
 ## 书单
 - 《沉思录》
 - 《穷查理宝典》
+- 《先知》
 - *The Autobiography of Benjamin Franklin*
 - *The Natural Way to Draw*
 - *The Little Book of Common Sense Investing*
 - 《文明、现代化、价值投资与中国》
 - 《熊市：价值投资者的春天》
 - *Structure and Interpretation of Computer Programs*
-- 纪伯伦《先知》
 - *Understanding Comics*
 
 
