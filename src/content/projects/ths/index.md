@@ -1,6 +1,6 @@
 ---
 title: "同花顺云软件产品"
-description: "金融大师、决策先锋等付费产品线"
+description: "金融大师、决策先锋等付费产品业务"
 date: "10 18 2023"
 # demoURL: "https://astro-sphere-demo.vercel.app"
 # repoURL: "https://github.com/markhorn-dev/astro-sphere"
