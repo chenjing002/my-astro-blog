@@ -14,7 +14,7 @@ date: "9 25 2019"
 
 ## 工作
 - 商业方面：负责数字展览场景 Go To Market，完成从 0 到 1 商业案例落地；参与智慧教育场景商务拓展；
-- 设计方面：独⽴负责在线商店系统，幼儿教育互动应用研发，参与系统级 User Interface 设计。
+- 设计方面：独⽴负责在线商店系统，幼儿教育互动应用研发；参与系统级 User Interface 设计，建模设计与交互规范定义，撰写和维护 [Aura SDK 文档](https://ezxr.github.io/AuraSDK_Doc/index.html)。
 
 ## 成果
 - [获 2019 年中国设计智造 DIA（佳作奖）](https://www.di-award.org/collections/detail/483.html?page_size%3D1000%26page%3D1%26year%3D2019%26award_type%3D4%26award_group%3D1%26category_id%3D299)
