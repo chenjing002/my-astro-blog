@@ -1,5 +1,5 @@
 ---
-title: "我的书单"
+title: "我的阅读清单"
 description: "这些读物影响了我的生活和思维方式"
 date: "06 20 2023"
 ---
@@ -17,6 +17,7 @@ date: "06 20 2023"
 - 《熊市：价值投资者的春天》
 - *Structure and Interpretation of Computer Programs*
 - *Understanding Comics*
+- *Calculus Made Easy*
 
 
 ## 其他
