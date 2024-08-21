@@ -4,7 +4,7 @@ description: "所有者收益作为真正的现金流来估算内在价值。"
 date: "11 06 2022"
 ---
 
-巴菲特在 1986 年致股东信中，通过收购的 Scott Fetzer 公司，展示了估算所有者收益（Owner Earnings）的方法，将所有者收益作为真正的现金流来估算内在价值。
+在 1986 年致股东信中，巴菲特通过收购的 Scott Fetzer 公司，展示了估算所有者收益（Owner Earnings）的方法，将所有者收益作为真正的现金流来估算内在价值。
 
 ![Owner Earnings](/blogimages/owner-earnings.webp)
 
