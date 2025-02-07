@@ -15,7 +15,7 @@ export const HOME: Metadata = {
 
 export const BLOG: Metadata = {
   TITLE: "文章",
-  DESCRIPTION: "文字记录我生命的章节",
+  DESCRIPTION: "文字记录我生命的点滴",
 };
 
 export const WORK: Metadata = {
@@ -30,18 +30,14 @@ export const PROJECTS: Metadata = {
 
 export const SOCIALS: Socials = [
   { 
-    NAME: "知乎",
-    HREF: "https://www.zhihu.com/people/28-39-23-41-72",
-  } ,
-  { 
     NAME: "小红书",
     HREF: "https://www.xiaohongshu.com/user/profile/59f426b9e8ac2b4ec98ad493",
   } ,
  
-  // { 
-  //   NAME: "github",
-  //   HREF: "https://github.com/markhorn-dev"
-  // },
+   { 
+    NAME: "Twitter",
+    HREF: "https://x.com/HangzhouIn"
+  },
   // { 
   //   NAME: "linkedin",
   //   HREF: "https://www.linkedin.com/in/markhorn-dev",

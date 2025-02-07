@@ -1,6 +1,9 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { HOME } from "@consts";
+import sanitizeHtml from 'sanitize-html';
+import MarkdownIt from 'markdown-it';
+const parser = new MarkdownIt();
 
 type Context = {
   site: string
@@ -23,8 +26,10 @@ export async function GET(context: Context) {
     items: items.map((item) => ({
       title: item.data.title,
       description: item.data.description,
-      pubDate: item.data.date,
+      pubDate: new Date(item.data.date),
       link: `/${item.collection}/${item.slug}/`,
+      content: item.body ? sanitizeHtml(parser.render(item.body)) : ''
     })),
+    customData: `<language>zh-cn</language>`,
   });
 }
