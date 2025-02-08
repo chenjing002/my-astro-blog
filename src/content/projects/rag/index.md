@@ -1,9 +1,7 @@
 ---
-title: "同花顺付费产品"
-description: "金融大师、决策先锋等付费产品的投顾服务和合规功能"
-date: "10 10 2023"
-# demoURL: "https://astro-sphere-demo.vercel.app"
-# repoURL: "https://github.com/markhorn-dev/astro-sphere"
+title: "同花顺 AI 智能应用"
+description: "同知顺答（RAG 企业知识库）、券商智能投资助理"
+date: "12 20 2024"
 ---
 
 ![云软件产品](./ths01.webp)
@@ -11,7 +9,7 @@ date: "10 10 2023"
 [官网](https://www.ths123.com/soft.html)  
 
 ## 工作 
-- 负责金融大师、决策先锋等付费产品的投顾服务和合规功能。
+负责金融大师、决策先锋等付费产品的投顾服务和合规功能。
 
 ## 成果
 - 决策先锋投顾版产品，上线后首月营收超 1000 万元；
