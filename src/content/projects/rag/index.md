@@ -1,7 +1,7 @@
 ---
 title: "同花顺 AI 智能应用"
-description: "同知顺答（RAG 企业知识库）、券商智能投资助理"
-date: "12 20 2024"
+description: "同知顺答（RAG 企业知识库）、券商智能客服"
+date: "1 10 2025"
 ---
 
 ![云软件产品](./ths01.webp)
