@@ -30,7 +30,7 @@ date: "12 20 2024"
   
   我计划从小市值公司开始入手，这是从 Joel Greenblatt 和 [Dirtcheapstocks](https://dirtcheapstocks.substack.com/) 得到的启发，尤其是这篇 [CZBS Case Study](https://dirtcheapstocks.substack.com/p/case-study-3x-earnings-20-of-net?utm_source=publication-search) 鼓舞人心，给了我极大的动力。同时，我第一次注要到考虑催化剂对业余投资者的重要性，有什么因素让股价未来会涨起来，换句话说，为什么要现在买？
 
-- 保持简单！
+- **保持简单！**
 
 ## 感谢启发我的投资人
 
