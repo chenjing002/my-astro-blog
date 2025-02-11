@@ -11,6 +11,13 @@ RAG 智能文档问答产品：同知顺答
 
 ![同知顺答](./rag.webp)
 
+![问答](./ragWeb.webp)
+
+RAG Tech Stack
+
+![RAG Tech Stack](./ragStack.webp)
+
+
 ## 工作 
 - 独立负责 RAG 知识库产品同知顺答；
 

@@ -3,6 +3,7 @@ import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@consts";
+import ZoomableImage from "@components/ZoomableImage.astro";
 
 type Props = {
   title: string;
@@ -10,6 +11,14 @@ type Props = {
 };
 
 const { title, description } = Astro.props;
+
+// 创建一个函数来替换 slot 内容中的 img 标签
+const replaceImages = (content: string) => {
+  return content.replace(
+    /<img([^>]*)>/g,
+    '<ZoomableImage$1></ZoomableImage>'
+  );
+};
 ---
 
 <!doctype html>
@@ -23,5 +32,93 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+    
+    <style is:global>
+      img:not([data-zoomable="false"]) {
+        cursor: zoom-in;
+      }
+      
+      .zoom-overlay {
+        background: rgba(0, 0, 0, 0.85);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      
+      .zoom-overlay.active {
+        opacity: 1;
+      }
+      
+      /* 确保放大状态下的鼠标样式优先级更高 */
+      .zoom-overlay,
+      .zoom-overlay .zoom-img {
+        cursor: zoom-out !important;
+      }
+      
+      .zoom-img {
+        transition: transform 0.3s ease;
+        max-width: 90vw;
+        max-height: 85vh;
+        margin: auto;
+        object-fit: contain;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    </style>
   </body>
 </html>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const images = document.querySelectorAll('img:not([data-zoomable="false"])');
+    
+    images.forEach(img => {
+      if (!img.hasAttribute('data-zoomable')) {
+        img.setAttribute('data-zoomable', 'true');
+        
+        let isZoomed = false;
+        
+        img.addEventListener('click', () => {
+          if (!isZoomed) {
+            // 创建容器
+            const container = document.createElement('div');
+            container.className = 'zoom-overlay fixed inset-0 z-50 flex items-center justify-center cursor-zoom-out';
+            
+            // 克隆图片
+            const zoomedImg = img.cloneNode(true);
+            zoomedImg.className = 'zoom-img';
+            container.appendChild(zoomedImg);
+            
+            // 添加到页面
+            document.body.appendChild(container);
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+            
+            // 添加动画
+            requestAnimationFrame(() => {
+              container.classList.add('active');
+            });
+            
+            // 点击关闭
+            const closeZoom = () => {
+              container.classList.remove('active');
+              document.body.style.overflow = '';
+              setTimeout(() => container.remove(), 200);
+              isZoomed = false;
+            };
+            
+            container.addEventListener('click', closeZoom);
+            
+            // ESC 键关闭
+            const handleEsc = (e: KeyboardEvent) => {
+              if (e.key === 'Escape') {
+                closeZoom();
+                document.removeEventListener('keydown', handleEsc);
+              }
+            };
+            document.addEventListener('keydown', handleEsc);
+            
+            isZoomed = true;
+          }
+        });
+      }
+    });
+  });
+</script>

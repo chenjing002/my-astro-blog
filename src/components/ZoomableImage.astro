@@ -1,0 +1,54 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+
+const { src, alt, class: className } = Astro.props;
+---
+
+<div class="relative inline-block">
+  <img
+    src={src}
+    alt={alt}
+    class:list={["cursor-zoom-in transition-all duration-300 ease-in-out hover:opacity-95", className]}
+    data-zoomable
+  />
+</div>
+
+<script>
+  const images = document.querySelectorAll('img[data-zoomable]');
+  
+  images.forEach(img => {
+    let isZoomed = false;
+    
+    img.addEventListener('click', () => {
+      if (!isZoomed) {
+        // 创建遮罩层
+        const overlay = document.createElement('div');
+        overlay.className = 'fixed inset-0 bg-black/50 z-40 cursor-zoom-out';
+        document.body.appendChild(overlay);
+        
+        // 放大图片
+        img.classList.remove('cursor-zoom-in');
+        img.classList.add('fixed', 'left-1/2', 'top-1/2', '-translate-x-1/2', '-translate-y-1/2', 'max-h-[90vh]', 'max-w-[90vw]', 'z-50', 'cursor-zoom-out');
+        
+        // 点击遮罩层或图片时恢复
+        const closeZoom = () => {
+          img.classList.remove('fixed', 'left-1/2', 'top-1/2', '-translate-x-1/2', '-translate-y-1/2', 'max-h-[90vh]', 'max-w-[90vw]', 'z-50', 'cursor-zoom-out');
+          img.classList.add('cursor-zoom-in');
+          overlay.remove();
+          isZoomed = false;
+        };
+        
+        overlay.addEventListener('click', closeZoom);
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeZoom();
+        });
+      }
+      isZoomed = !isZoomed;
+    });
+  });
+</script> 
