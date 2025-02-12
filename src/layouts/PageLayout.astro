@@ -83,7 +83,7 @@ const replaceImages = (content: string) => {
             container.className = 'zoom-overlay fixed inset-0 z-50 flex items-center justify-center cursor-zoom-out';
             
             // 克隆图片
-            const zoomedImg = img.cloneNode(true);
+            const zoomedImg = img.cloneNode(true) as HTMLImageElement;  // 添加类型断言
             zoomedImg.className = 'zoom-img';
             container.appendChild(zoomedImg);
             
