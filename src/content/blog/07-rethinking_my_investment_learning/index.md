@@ -6,7 +6,7 @@ date: "12 20 2024"
 
 过去两年自学价值投资的过程中，我走过不少弯路。从[如何计算所有者收益？以 Scott Fetzer 为例](/blog/03-how-to-calculate-the-intrinsic-value-of-a-company)和[剩余收益与估值](/blog/05-my-investment-learning)这两篇文章就可以看出，我一直在寻找专业准确评估企业价值的方法。
 
-![rethinkMyLearning](rethinkMyLearning.webp)
+![rethinkMyLearning](rethinkMyInvesting.webp)
 
 ## 两个主要错误：
 - 崇拜投资大师，热衷看投资书籍，而不是去看年报，去研究公司。
