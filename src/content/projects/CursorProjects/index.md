@@ -36,6 +36,8 @@ AI 很好玩，AI 让创造变得更简单。
 检索关键词在多个 PDF 文件中的位置，并高亮显示。
 
 ![Multi PDF Full Text Searcher](./pdfSearcher.webp)
+![PDF Searcher Diagram](./pdfSearcherDiagram.webp)
+
 
 ## 4. 批处理工具
 - GreatInvestorQuoteCards：批量生成精美投资大师语录卡片
