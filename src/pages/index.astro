@@ -17,11 +17,18 @@ const projects = (await getCollection('projects'))
   .filter(project => !project.data.draft)
   .slice(0, 5);
 
-const externalProject = {
-  title: "中国上市公司致股东信",
-  description: "提升致股东信阅读效率（基于 GLM-OCR、VibeVoice、ChatGPT ）",
-  href: "https://chenjing002.github.io/letters-to-shareholders/",
-};
+const externalProjects = [
+  {
+    title: "LLM Reader",
+    description: "见微知著，洞察秋毫",
+    href: "https://chenjing002.github.io/llm-reader/",
+  },
+  {
+    title: "中国上市公司致股东信",
+    description: "提升致股东信阅读效率（基于 GLM-OCR、VibeVoice、ChatGPT ）",
+    href: "https://chenjing002.github.io/letters-to-shareholders/",
+  },
+];
 
 const allwork = (await getCollection("work"))
   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
@@ -68,29 +75,31 @@ const work = await Promise.all(
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          <li>
-            <a
-              href={externalProject.href}
-              class="relative group flex flex-nowrap py-3 px-2 pr-5 text-black/70 dark:text-white/90 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
-            >
-              <div class="flex flex-col flex-1 truncate">
-                <div class="font-semibold">
-                  {externalProject.title}
-                </div>
-                <div class="text-sm pt-1">
-                  {externalProject.description}
-                </div>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current"
+          {externalProjects.map((ep) => (
+            <li>
+              <a
+                href={ep.href}
+                class="relative group flex flex-nowrap py-3 px-2 pr-5 text-black/70 dark:text-white/90 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
               >
-                <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
-                <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
-              </svg>
-            </a>
-          </li>
+                <div class="flex flex-col flex-1 truncate">
+                  <div class="font-semibold">
+                    {ep.title}
+                  </div>
+                  <div class="text-sm pt-1">
+                    {ep.description}
+                  </div>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
+                  <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+                </svg>
+              </a>
+            </li>
+          ))}
           {projects.map(project => (
             <li>
               <ArrowCard entry={project} />
