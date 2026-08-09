@@ -39,8 +39,8 @@ import BackToTop from "@components/BackToTop.astro";
           </svg>
         </a>
         <button
-          id="light-theme-button"
-          aria-label="Light theme"
+          id="theme-toggle-button"
+          aria-label="Toggle theme"
           class="group size-8 flex items-center justify-center rounded-full"
         >
           <svg
@@ -53,7 +53,7 @@ import BackToTop from "@components/BackToTop.astro";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+            class="hidden dark:block group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
           >
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -65,12 +65,6 @@ import BackToTop from "@components/BackToTop.astro";
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-        </button>
-        <button
-          id="dark-theme-button"
-          aria-label="Dark theme"
-          class="group size-8 flex items-center justify-center rounded-full"
-        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -81,7 +75,7 @@ import BackToTop from "@components/BackToTop.astro";
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
+            class="block dark:hidden group-hover:stroke-black group-hover:dark:stroke-white transition-colors duration-300 ease-in-out"
           >
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
