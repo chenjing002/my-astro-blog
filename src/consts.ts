@@ -29,11 +29,6 @@ export const PROJECTS: Metadata = {
 };
 
 export const SOCIALS: Socials = [
-  { 
-    NAME: "小红书",
-    HREF: "https://www.xiaohongshu.com/user/profile/59f426b9e8ac2b4ec98ad493",
-  } ,
- 
    { 
     NAME: "Twitter",
     HREF: "https://x.com/HangzhouIn"
