@@ -17,9 +17,9 @@ const {
   src,
   alt,
   class: className,
-  colors = ["#4f46e5", "#7c3aed", "#db2777", "#f59e0b"],
-  scale = 1.4,
-  speed = 0.12,
+  colors = ["#312e81", "#4f46e5", "#7c3aed", "#c026d3", "#f472b6"],
+  scale = 1.6,
+  speed = 0.14,
 } = Astro.props;
 
 const config = JSON.stringify({ colors, scale, speed });
@@ -96,9 +96,9 @@ const config = JSON.stringify({ colors, scale, speed });
 
     float fbm(vec3 p){
       float f = 0.0, amp = 0.5;
-      for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 5; i++) {
         f += amp * snoise(p);
-        p *= 2.0;
+        p = p * 2.02 + 100.0;
         amp *= 0.5;
       }
       return f;
@@ -118,12 +118,32 @@ const config = JSON.stringify({ colors, scale, speed });
     void main(){
       vec2 uv = gl_FragCoord.xy / u_resolution.xy;
       float aspect = u_resolution.x / u_resolution.y;
-      vec2 p = vec2(uv.x * aspect, uv.y) * u_scale;
-      float n = fbm(vec3(p, u_time));
-      float m = fbm(vec3(p * 0.6 + 4.0, u_time * 0.7 + 10.0));
-      float t = 0.5 + 0.5 * n + 0.15 * m;
-      vec3 col = palette(t);
-      col += 0.06 * m;
+      vec2 p = vec2((uv.x - 0.5) * aspect, uv.y - 0.5) * u_scale;
+      float t = u_time;
+
+      // domain warping — folds the field into flowing, liquid ridges
+      vec2 warp = vec2(
+        fbm(vec3(p, t)),
+        fbm(vec3(p + vec2(3.2, 1.7), t + 2.0))
+      );
+      float f = fbm(vec3(p + 1.4 * warp, t * 0.9));
+
+      // use the full palette range with a gentle S-curve
+      float v = smoothstep(0.05, 0.95, f * 0.5 + 0.5);
+      vec3 col = palette(v);
+
+      // soft glow on the ridges for depth
+      float glow = pow(clamp(v, 0.0, 1.0), 3.0);
+      col += glow * 0.22 * vec3(0.55, 0.35, 0.9);
+
+      // gentle vignette to frame the image
+      float vig = smoothstep(1.05, 0.35, length(uv - 0.5) * 1.15);
+      col *= mix(0.8, 1.0, vig);
+
+      // subtle dither to kill banding
+      float d = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
+      col += (d - 0.5) / 255.0;
+
       gl_FragColor = vec4(col, 1.0);
     }
   `;
@@ -184,7 +204,7 @@ const config = JSON.stringify({ colors, scale, speed });
     }
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       const w = Math.max(1, Math.floor(container.clientWidth * dpr));
       const h = Math.max(1, Math.floor(container.clientHeight * dpr));
       if (canvas.width !== w || canvas.height !== h) {
