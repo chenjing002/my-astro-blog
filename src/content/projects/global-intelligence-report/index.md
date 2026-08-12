@@ -1,8 +1,7 @@
 ---
 title: "全球智能研报"
-description: "汇集新华研报、海外投行研报、国内机构研报与全球智库"
-date: "10 05 2026"
+description: "面向海外的 AI 智能研报平台"
+date: "10 01 2026"
+externalURL: "https://client.cnfic.com.cn/web/cnfic/ai-report-oversea/#/home"
 ---
 
-## 工作 
-- 

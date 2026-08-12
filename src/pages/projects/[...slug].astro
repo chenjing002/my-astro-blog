@@ -10,6 +10,7 @@ import Link from "@components/Link.astro";
 export async function getStaticPaths() {
   const projects = (await getCollection("projects"))
     .filter(post => !post.data.draft)
+    .filter(post => !post.data.externalURL)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   return projects.map((project) => ({
     params: { slug: project.slug },
