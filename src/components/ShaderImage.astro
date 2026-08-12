@@ -24,7 +24,7 @@ const {
   colors = ["#4449cf", "#ffd1e0", "#f94346", "#ffd36b", "#ffffff"],
   stepsPerColor = 2,
   softness = 0,
-  scale = 0.6,
+  scale = 3,
   speed = 0.5,
 } = Astro.props;
 
@@ -160,7 +160,7 @@ const config = JSON.stringify({ colors, stepsPerColor, softness, scale, speed })
     const colors: number[][] = (cfg.colors || ["#4449cf", "#ffd1e0", "#f94346"])
       .slice(0, 6)
       .map(hexToRgb);
-    const scale = cfg.scale ?? 0.6;
+    const scale = cfg.scale ?? 3;
     const speed = cfg.speed ?? 0.5;
     const steps = cfg.stepsPerColor ?? 2;
     const softness = cfg.softness ?? 0;
